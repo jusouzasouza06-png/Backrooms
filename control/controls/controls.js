@@ -1,9 +1,13 @@
-export const keys = {};
+const keys = {};
 
-document.addEventListener("keydown", e => {
-    keys[e.key.toLowerCase()] = true;
-});
+document.getElementById("up").ontouchstart = () => keys.up = true;
+document.getElementById("up").ontouchend = () => keys.up = false;
 
-document.addEventListener("keyup", e => {
-    keys[e.key.toLowerCase()] = false;
-});
+document.getElementById("down").ontouchstart = () => keys.down = true;
+document.getElementById("down").ontouchend = () => keys.down = false;
+
+document.getElementById("left").ontouchstart = () => keys.left = true;
+document.getElementById("left").ontouchend = () => keys.left = false;
+
+document.getElementById("right").ontouchstart = () => keys.right = true;
+document.getElementById("right").ontouchend = () => keys.right = false;
